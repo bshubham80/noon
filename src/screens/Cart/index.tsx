@@ -14,6 +14,7 @@ import { useAppSelector } from '../../utils/reduxHelper';
 import { CartItem as CartItemType, Product } from '../../redux/types';
 import { Seperator } from '../../components/Seperator';
 import { EmptyState } from '../../components/Cart/EmptyState';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const Cart: React.FC = () => {
   const { items: cartItems, totalPrice } = useAppSelector(state => state.cart);
@@ -45,7 +46,7 @@ export const Cart: React.FC = () => {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <FlatList
         data={cartItems}
         renderItem={renderItem}
@@ -62,7 +63,7 @@ export const Cart: React.FC = () => {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -78,7 +79,6 @@ const styles = StyleSheet.create({
     height: 16,
   },
   totalContainer: {
-    marginTop: 20,
     borderTopWidth: 1,
     borderTopColor: '#ccc',
     padding: 20,
