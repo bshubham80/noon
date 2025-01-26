@@ -8,7 +8,7 @@ export interface Product {
 	description: string;
 	category: string;
 	isBanner: boolean;
-	isFeatured: boolean;
+	isFeature: boolean;
 }
 
 export interface ListingSliceState {

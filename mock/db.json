@@ -5,7 +5,7 @@
       "name": "Wireless Headphones",
       "description": "Experience high-quality sound with these wireless headphones. Perfect for music and calls.",
       "price": 120,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/217/300/200"],
       "category": "Electronics",
       "isBanner": true,
       "isFeature": false
@@ -15,7 +15,7 @@
       "name": "Smartphone",
       "description": "A cutting-edge smartphone with a stunning display and incredible performance.",
       "price": 699,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/238/300/200"],
       "category": "Electronics",
       "isBanner": false,
       "isFeature": true
@@ -25,7 +25,7 @@
       "name": "Running Shoes",
       "description": "Lightweight and comfortable running shoes for your daily jog or marathon training.",
       "price": 75,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/239/300/200"],
       "category": "Fashion",
       "isBanner": false,
       "isFeature": true
@@ -35,7 +35,7 @@
       "name": "Backpack",
       "description": "A durable backpack with multiple compartments for laptops, books, and travel essentials.",
       "price": 45,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/247/300/200"],
       "category": "Accessories",
       "isBanner": true,
       "isFeature": false
@@ -45,7 +45,7 @@
       "name": "Gaming Mouse",
       "description": "A high-precision gaming mouse with customizable buttons and RGB lighting.",
       "price": 35,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/257/300/200"],
       "category": "Gaming",
       "isBanner": false,
       "isFeature": true
@@ -55,7 +55,7 @@
       "name": "Fitness Tracker",
       "description": "Track your steps, heart rate, and sleep with this sleek fitness tracker.",
       "price": 60,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/267/300/200"],
       "category": "Health & Fitness",
       "isBanner": false,
       "isFeature": true
@@ -65,7 +65,7 @@
       "name": "Coffee Maker",
       "description": "Brew delicious coffee at home with this compact and easy-to-use coffee maker.",
       "price": 80,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/277/300/200"],
       "category": "Home Appliances",
       "isBanner": false,
       "isFeature": true
@@ -75,7 +75,7 @@
       "name": "Wireless Keyboard",
       "description": "A sleek and portable wireless keyboard compatible with various devices.",
       "price": 50,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/287/300/200"],
       "category": "Electronics",
       "isBanner": false,
       "isFeature": true
@@ -85,7 +85,7 @@
       "name": "Bluetooth Speaker",
       "description": "A compact and powerful Bluetooth speaker for music lovers on the go.",
       "price": 40,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/297/300/200"],
       "category": "Electronics",
       "isBanner": false,
       "isFeature": true
@@ -95,7 +95,7 @@
       "name": "Travel Mug",
       "description": "Keep your beverages hot or cold for hours with this insulated travel mug.",
       "price": 20,
-      "image": ["https://via.placeholder.com/150"],
+      "image": ["https://picsum.photos/id/230/300/200"],
       "category": "Accessories",
       "isBanner": true,
       "isFeature": false

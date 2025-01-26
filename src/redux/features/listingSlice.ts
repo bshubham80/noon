@@ -14,14 +14,8 @@ export const listingSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addMatcher(productsApi.endpoints.getProducts.matchFulfilled, (state, action) => {
-			action.payload.reduce((acc, cur) => {
-				if (cur.isBanner) {
-					acc.banners.push(cur);
-				} else if (cur.isFeatured) {
-					acc.featured.push(cur);
-				}
-				return acc;
-			}, state);
+			state.banners = action.payload.filter(i => i.isBanner);
+			state.featured = action.payload.filter(i => i.isFeature);
 		});
 	},
 });

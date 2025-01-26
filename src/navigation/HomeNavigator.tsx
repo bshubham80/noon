@@ -7,7 +7,7 @@ export const HomeNavigator = createBottomTabNavigator({
   initialRouteName: 'Listing',
   screens: {
     Listing,
-    ProductDetail,
+    // ProductDetail,
 		Cart,
   },
   screenOptions: {
