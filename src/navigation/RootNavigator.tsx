@@ -7,12 +7,14 @@ import { createStaticNavigation } from '@react-navigation/native';
 export const RootNavigator = createStackNavigator({
   initialRouteName: 'Home',
   screens: {
-    Home: HomeNavigator,
+    Home: {
+      screen: HomeNavigator,
+      options: {
+        headerShown: false,
+      },
+    },
     ProductDetail,
   },
-	screenOptions: {
-		header: undefined,
-	},
 });
 
 export const RootNavigation = createStaticNavigation(RootNavigator);

@@ -10,4 +10,7 @@ export const HomeNavigator = createBottomTabNavigator({
     ProductDetail,
 		Cart,
   },
+  screenOptions: {
+    headerShown: false,
+  },
 });
