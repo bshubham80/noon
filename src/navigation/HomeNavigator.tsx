@@ -8,7 +8,7 @@ export const HomeNavigator = createBottomTabNavigator({
   screens: {
     Listing,
     GameIntro,
-		Cart,
+    Cart,
   },
   screenOptions: {
     headerShown: false,

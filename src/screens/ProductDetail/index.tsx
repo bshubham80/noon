@@ -1,5 +1,13 @@
 import React, { useCallback } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ListRenderItem, Dimensions } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  ListRenderItem,
+  Dimensions,
+} from 'react-native';
 import { useGetProductByIdQuery } from '../../redux/api/productsApi';
 import Carousel from '../../components/Carousel';
 import { useAppDispatch, useAppSelector } from '../../utils/reduxHelper';
@@ -16,7 +24,9 @@ export const ProductDetail = ({ route }) => {
 
   const dispatch = useAppDispatch();
 
-  const alreadyAddedInCart = useAppSelector(state => state.cart.items.some(item => item.product.id === id));
+  const alreadyAddedInCart = useAppSelector(state =>
+    state.cart.items.some(item => item.product.id === id),
+  );
 
   const renderItem: ListRenderItem<string> = useCallback(({ item }) => {
     return (
@@ -34,7 +44,7 @@ export const ProductDetail = ({ route }) => {
     }
 
     if (alreadyAddedInCart) {
-      dispatch(removeFromCart({product: data}));
+      dispatch(removeFromCart({ product: data }));
     } else {
       dispatch(addToCart({ product: data }));
     }
@@ -58,15 +68,11 @@ export const ProductDetail = ({ route }) => {
         <Text style={styles.price}>${data?.price}</Text>
         <Text style={styles.description}>{data?.description}</Text>
 
-        <TouchableOpacity
-          style={styles.addToCartButton}
-          onPress={onAddToCart}
-        >
+        <TouchableOpacity style={styles.addToCartButton} onPress={onAddToCart}>
           <Text style={styles.buttonText}>
             {alreadyAddedInCart ? 'Remove from cart' : 'Add to Cart'}
           </Text>
         </TouchableOpacity>
-
       </View>
     </View>
   );

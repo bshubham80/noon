@@ -1,5 +1,13 @@
 import React, { useCallback } from 'react';
-import { View, Image, StyleSheet, Dimensions, FlatList, Text, Pressable } from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+  FlatList,
+  Text,
+  Pressable,
+} from 'react-native';
 import { Product } from '../redux/types';
 
 const { width: screenWidth } = Dimensions.get('window');
@@ -13,25 +21,33 @@ const FeatureProduct: React.FC<Props> = ({ data, onItemClick }) => {
   const renderItem = useCallback(
     ({ item }: { item: Product }) => {
       console.log(item.image[0]);
-      return(
+      return (
         <Pressable onPress={() => onItemClick(item)}>
           <View style={styles.card}>
-            <Image source={{ uri: item.image[0] }} style={styles.image} resizeMode="cover" />
+            <Image
+              source={{ uri: item.image[0] }}
+              style={styles.image}
+              resizeMode="cover"
+            />
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.description} numberOfLines={2}>
               {item.description}
             </Text>
           </View>
         </Pressable>
-    );},
-    [onItemClick]
+      );
+    },
+    [onItemClick],
   );
 
   const keyExtractor = useCallback((item: Product) => String(item.id), []);
 
   const separator = useCallback(() => <View style={styles.separator} />, []);
 
-  const HeaderComponent = useCallback(() => <Text style={styles.title}>Featured Products</Text>, []);
+  const HeaderComponent = useCallback(
+    () => <Text style={styles.title}>Featured Products</Text>,
+    [],
+  );
 
   return (
     <FlatList

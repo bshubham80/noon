@@ -11,23 +11,22 @@ interface Props {
 }
 
 const ProductCarousel: React.FC<Props> = ({ data, onItemClick }) => {
-
-  const renderItem = useCallback(({ item }: { item: Product }) => (
-    <Pressable onPress={() => onItemClick(item)}>
-    <View style={styles.container}>
-      <Image
-        resizeMode="cover"
-        style={styles.image}
-        source={{ uri: item.image[0] }}
-      />
-    </View>
-    </Pressable>
-  ), [onItemClick]);
-
-  const keyExtractor = useCallback(
-    (item: Product) => item.id,
-    [],
+  const renderItem = useCallback(
+    ({ item }: { item: Product }) => (
+      <Pressable onPress={() => onItemClick(item)}>
+        <View style={styles.container}>
+          <Image
+            resizeMode="cover"
+            style={styles.image}
+            source={{ uri: item.image[0] }}
+          />
+        </View>
+      </Pressable>
+    ),
+    [onItemClick],
   );
+
+  const keyExtractor = useCallback((item: Product) => item.id, []);
 
   return (
     <Carousel

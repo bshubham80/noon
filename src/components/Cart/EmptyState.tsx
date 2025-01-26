@@ -9,12 +9,11 @@ interface EmptyStateProps {
 export const EmptyState: React.FC<EmptyStateProps> = ({ onGoToShop }) => {
   return (
     <View style={styles.emptyCartContainer}>
-      <Image
-        source={{ uri: constants.BASKET }}
-        style={styles.emptyCartImage}
-      />
+      <Image source={{ uri: constants.BASKET }} style={styles.emptyCartImage} />
       <Text style={styles.emptyCartText}>Your cart is empty!</Text>
-      <Text style={styles.emptyCartSubtext}>Looks like you haven't added anything to your cart yet.</Text>
+      <Text style={styles.emptyCartSubtext}>
+        Looks like you haven't added anything to your cart yet.
+      </Text>
       <TouchableOpacity onPress={onGoToShop} style={styles.shopButton}>
         <Text style={styles.shopButtonText}>Go to Shop</Text>
       </TouchableOpacity>

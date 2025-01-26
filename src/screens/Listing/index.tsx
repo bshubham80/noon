@@ -11,22 +11,25 @@ import { Product } from '../../redux/types';
 import { useNavigation } from '@react-navigation/native';
 
 export const Listing: React.FC = () => {
-	const naviation = useNavigation();
-    const { isLoading } = useGetProductsQuery();
-    const { banners, featured } = useAppSelector(state => state.listing);
+  const naviation = useNavigation();
+  const { isLoading } = useGetProductsQuery();
+  const { banners, featured } = useAppSelector(state => state.listing);
 
-		const onItemClick = useCallback((item: Product) => {
+  const onItemClick = useCallback(
+    (item: Product) => {
       naviation.navigate('ProductDetail', { productId: item.id });
-		}, [naviation]);
+    },
+    [naviation],
+  );
 
-    if (isLoading) {
-        return <ActivityIndicator />;
-    }
+  if (isLoading) {
+    return <ActivityIndicator />;
+  }
 
-    return (
-      <View>
-        <ProductCarousel data={banners} onItemClick={onItemClick} />
-        <FeatureProduct data={featured} onItemClick={onItemClick} />
-    	</View>
-    );
+  return (
+    <View>
+      <ProductCarousel data={banners} onItemClick={onItemClick} />
+      <FeatureProduct data={featured} onItemClick={onItemClick} />
+    </View>
+  );
 };

@@ -8,7 +8,11 @@ interface CartItemProps {
   onDecrease: (product: Product) => void;
 }
 
-const CartItem: React.FC<CartItemProps> = ({ item, onIncrease, onDecrease }) => {
+const CartItem: React.FC<CartItemProps> = ({
+  item,
+  onIncrease,
+  onDecrease,
+}) => {
   const { quantity, product } = item;
 
   return (
@@ -23,15 +27,13 @@ const CartItem: React.FC<CartItemProps> = ({ item, onIncrease, onDecrease }) => 
       <View style={styles.quantityControls}>
         <TouchableOpacity
           onPress={() => onDecrease(product)}
-          style={[styles.button, styles.decreaseButton]}
-        >
+          style={[styles.button, styles.decreaseButton]}>
           <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
         <Text style={styles.quantity}>{quantity}</Text>
         <TouchableOpacity
           onPress={() => onIncrease(product)}
-          style={[styles.button, styles.increaseButton]}
-        >
+          style={[styles.button, styles.increaseButton]}>
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>

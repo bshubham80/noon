@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "lint:write": "prettier ./src/ --write",
     "start": "react-native start",
     "test": "jest",
     "start-mock-server": "json-server --watch ./mock/db.json --port 3000"
