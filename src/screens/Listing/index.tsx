@@ -16,9 +16,7 @@ export const Listing: React.FC = () => {
     const { banners, featured } = useAppSelector(state => state.listing);
 
 		const onItemClick = useCallback((item: Product) => {
-
       naviation.navigate('ProductDetail', { productId: item.id });
-      console.log(`Clicked on product: ${item}`);
 		}, [naviation]);
 
     if (isLoading) {

@@ -1,13 +1,13 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Listing } from '../screens/Listing';
-import { ProductDetail } from '../screens/ProductDetail';
 import { Cart } from '../screens/Cart';
+import { GameIntro } from '../screens/GameIntro';
 
 export const HomeNavigator = createBottomTabNavigator({
   initialRouteName: 'Listing',
   screens: {
     Listing,
-    // ProductDetail,
+    GameIntro,
 		Cart,
   },
   screenOptions: {
