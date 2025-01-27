@@ -16,10 +16,12 @@
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/stack": "^7.1.1",
     "@reduxjs/toolkit": "^2.5.0",
+    "@shopify/react-native-skia": "^1.10.2",
     "json-server": "^1.0.0-beta.3",
     "react": "18.3.1",
     "react-native": "0.77.0",
     "react-native-gesture-handler": "^2.22.1",
+    "react-native-reanimated": "^3.16.7",
     "react-native-safe-area-context": "^5.1.0",
     "react-native-screens": "^4.5.0",
     "react-redux": "^9.2.0"
