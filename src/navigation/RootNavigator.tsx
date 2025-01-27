@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { HomeNavigator } from './HomeNavigator';
 import { ProductDetail } from '../screens/ProductDetail';
 import { createStaticNavigation } from '@react-navigation/native';
+import Game from '../screens/Game';
 
 export const RootNavigator = createStackNavigator({
   initialRouteName: 'Home',
@@ -13,6 +14,13 @@ export const RootNavigator = createStackNavigator({
       },
     },
     ProductDetail,
+    Game: {
+      screen: Game,
+      options: {
+        headerShown: false,
+        presentation: 'modal',
+      },
+    },
   },
 });
 

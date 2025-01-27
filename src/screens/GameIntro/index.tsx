@@ -1,9 +1,13 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const GameIntro = () => {
-  const handleStartGame = useCallback(() => {}, []);
+  const navigation = useNavigation();
+  const handleStartGame = useCallback(() => {
+    navigation.navigate('Game');
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
